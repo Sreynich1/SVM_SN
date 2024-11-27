@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="BMI.css">
+</head>
+<body>
+    <div class="bmi-calculator">
+        <div class="tabs">
+            <button style="font-family: khmer M1; font-size: 18px;" class="tab-button active" onclick="showTab('metric')">កម្មវីធីគណ​នាទម្ងន់ BMI</button>
+        </div>
+        <div class="tab-content" id="metric">
+            <form style="font-family: khmer;" id="bmi-form">
+                <label for="age">អាយុ:</label>
+                <input type="number" id="age" min="2" max="120" required>
+                <label for="gender">ភេទ:</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">ប្រុស</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">ស្រី</label>
+                </div>
+                <label for="height">កម្ពស់ (Cm):</label>
+                <input type="number" id="height" step="0.01" required>
+                <label for="weight">ទម្ងន់ (Kg):</label>
+                <input type="number" id="weight" required>
+                <div class="buttons">
+                    <button type="submit">គណនា</button>
+                    <button type="button" onclick="clearForm()">សម្អាត</button>
+                </div><br>
+                <a style="font-family: khmer; font-size: 18px;" href="Instructions.html">ការណែនាំ</a>
+                <a style="font-family: khmer; font-size: 18px;" href="HowTo.html">របៀបប្រើប្រាស់កម្មវិធី</a>
+            </form>
+        </div>
+        <p id="bmi-result"></p>
+    </div>
+    <script src="BMI.js"></script>
+</body>
+</html>
